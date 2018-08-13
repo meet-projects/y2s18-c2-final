@@ -1,7 +1,8 @@
 * {
     /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+    padding: 50;
+    margin: 80;
+    background-color: brown
 }
 
 /* Put your styles BELOW this line */
