@@ -4,8 +4,8 @@ from model import Base, Student
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-grom model import base, Student_info
-from model import base, Workplace_info 
+from model import Base, Student_info
+from model import Base, Workplace_info 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
 # Make sure you have the same name for the database in the app.py file!
 engine = create_engine('sqlite:///project.db')
@@ -14,8 +14,8 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 # Your database functions are located under here (querying, adding items, etc.)
-def chek_log_in()
-    if  request.format[Email]=
+#def chek_log_in()
+ #   if  request.format[Email]=
 # Example of adding a student:
 def add_student(student_name, student_year):
     print("Added a student!")

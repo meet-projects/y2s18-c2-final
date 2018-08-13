@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login</title>
+  <title>Seeker</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+    <img id='img' src="{{ url_for('static', filename='itseasy.jpg') }}" alt="its easy" width="450" height="350">
 <div class="container">
   <h2>seeker</h2>
-  <button type="button" class="btn btn-info btn-lg" id="myBtn">Log in</button>
-  <div class="modal fade" id="myModal" role="dialog">
+  <button type="button" class="btn btn-info btn-lg" id="Button">Log in</button>
+  <div class="modal fade" id="Modal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -52,11 +53,24 @@
 
 <script>
 $(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
+    $("#Button").click(function(){
+        $("#Modal").modal();
     });
 });
 </script>
 
-</body>
-</html>
+<!-- </body>
+    <head>
+        <title>Seeker</title>
+        
+        
+    </head>
+    
+    <body>
+        <img id='img' src="{{ url_for('static', filename='itseasy.jpg') }}" alt="its easy" width="450" height="350">
+    </body>
+    
+    <form method="get" action="/login">
+        <button type="submit">LOGIN</button>
+    </form>
+</html> -->
