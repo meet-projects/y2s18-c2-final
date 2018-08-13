@@ -12,18 +12,17 @@ def home():
 
 # App routing code here
 @app.route('/register_student')
-def register():
+def register_student():
     return render_template('register_student.html')
 
-@app.route('/register_employeer')
-def register():
+@app.route('/register_employer')
+def register_employer():
     return render_template('register_employeer.html')
 
 @app.route('/login')
 def login():
     return render_template('login.html')
 
-@app.route('')
 
 # Running the Flask app
 if __name__ == "__main__":
