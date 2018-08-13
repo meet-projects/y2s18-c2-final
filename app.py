@@ -23,9 +23,13 @@ def register_employeer():
 def login():
     return render_template('login.html')
 
+<<<<<<< HEAD
+
+=======
 @app.route('/logedin')
 def logedin():
     return render_template('home2.html')
+>>>>>>> 466e08e0b5a8586728646cb54d039d283596cfc2
 
 # Running the Flask app
 if __name__ == "__main__":
