@@ -23,7 +23,7 @@ def register():
 def login():
     return render_template('login.html')
 
-@app.route('')
+
 
 # Running the Flask app
 if __name__ == "__main__":
