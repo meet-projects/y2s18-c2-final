@@ -14,9 +14,14 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 # Your database functions are located under here (querying, adding items, etc.)
-def chek_log_in()
-    students_info=session.query(Student_info).filter_by.{email=email).first
-    if  request.format[password]=
+def chek_log_in():
+    students_email=request.form["Email"]
+    students_password=request.form["password"]
+    return  session.query(Student_info).filter_by(password=password, email=email).first()
+
+def check_login_workplace():
+    workplace_password=request["password"]
+    orkplace_email=request.form[Email]
 # Example of adding a student:
 def add_student(student_name, student_year):
     print("Added a student!")

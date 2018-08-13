@@ -15,7 +15,7 @@ class Student_info(base)
     gender=Column(0
     email=Column(String)
 
-class `Workplace_info(base) 
+class Workplace_info(base) 
     __tablename__="workplace_info"
     user_number=Column(Integer,primary_key=true)
     workplace_password=Column(Integer)
