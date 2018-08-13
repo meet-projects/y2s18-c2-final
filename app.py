@@ -6,11 +6,26 @@ from databases import add_student, get_all_students
 
 # Starting the flask app
 app = Flask(__name__)
-
-# App routing code here
 @app.route('/')
 def home():
     return render_template('home.html')
+
+# App routing code here
+@app.route('/register_student')
+def register_student():
+    return render_template('register_student.html')
+
+@app.route('/register_employeer')
+def register_employeer():
+    return render_template('register_employee.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/logedin')
+def logedin():
+    return render_template('home2.html')
 
 # Running the Flask app
 if __name__ == "__main__":
