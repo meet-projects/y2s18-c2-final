@@ -26,15 +26,6 @@ class Workplace_info(Base):
     workplace_email=Column(String)
     salary=Column(Integer)
 
-# Example code:
-class Student(Base):
-    __tablename__ = "students"
-    id = Column(Integer, primary_key = True)
-    name = Column(String)
-    year = Column(Integer)
-    gender = Column(String)
-    def __repr__(self):
-        return ("Student name: {}, Student year:{}".format(self.name, self.year))
 class Job(Base):
     __tablename__ = "jobs"
     id = Column(Integer, primary_key = True)
