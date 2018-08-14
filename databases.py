@@ -20,6 +20,7 @@ def add_job(name,desc,salary,location,min_age):
     session.commit()
 def get_job():
     jobs=session.query(Job).all()
+    return jobs
 def add_student(user_name,password,confirm_password,full_name,birthday,email):
     student=Student_info(user_name=user_name,password=password,confirm_password=confirm_password,full_name=full_name,birthday=birthday,email=email)
     session.add(student)
