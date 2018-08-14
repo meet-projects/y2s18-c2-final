@@ -35,3 +35,13 @@ class Student(Base):
     gender = Column(String)
     def __repr__(self):
         return ("Student name: {}, Student year:{}".format(self.name, self.year))
+class Job(Base):
+    __tablename__ = "jobs"
+    id = Column(Integer, primary_key = True)
+    min_age_jobs = Column(String)
+    location = Column(String)
+    salary = Column(Integer)
+    name = Column(String)
+    description = Column(String)
+    
+
