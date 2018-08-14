@@ -1,25 +1,25 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 Base = declarative_base()
-class Student_info(base)
+class Student_info(Base):
     __tablename__="student_info"
-    user_number=Column(Integer,primary_key=true)
+    user_number=Column(Integer,primary_key=True)
     user_name=Column(String)
     password=Column(Integer)
     confirm_password=Column(Integer)
     full_name=Column(String)
-    birthday=Column(date)
-    gender=Column(0
+    birthday=Column(Date)
+    gender=Column(Boolean)
     email=Column(String)
 
-class Workplace_info(base) 
+class Workplace_info(Base):
     __tablename__="workplace_info"
-    user_number=Column(Integer,primary_key=true)
+    user_number=Column(Integer,primary_key=True)
     workplace_password=Column(Integer)
-    confirm_password=Column(Integer
+    confirm_password=Column(Integer)
     workplace_name=Column(String)
     workplace_location=Column(String)
     min_age=Column(Integer)
