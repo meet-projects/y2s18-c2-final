@@ -47,7 +47,7 @@ def check_login_workplace():
 def add_student(student_name, student_year):
     print("Added a student!")
     student = Student(name=student_name, year=student_year)
-    sekkssion.add(student)
+    session.add(student)
     session.commit()
 
 def get_all_students():
