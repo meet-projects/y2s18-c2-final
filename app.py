@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import add_student, get_all_students, check_log_in, add_job, add_workplace, 
+from databases import add_student, check_log_in, add_job, add_workplace
 
 # Starting the flask app
 app = Flask(__name__)

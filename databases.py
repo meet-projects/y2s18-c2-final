@@ -23,13 +23,13 @@ def get_job():
     jobs = session.query(Job).all()
     return jobs
 
-def add_student(user_name,password,confirm_password,full_name,birthday,email):
-    student=Student_info(user_name=user_name,password=password,confirm_password=confirm_password,full_name=full_name,birthday=birthday,email=email)
+def add_student(user_name, password, birthday, email):
+    student=Student_info(user_name=user_name, password=password, birthday=birthday, email=email)
     session.add(student)
     session.commit()
 
-def add_workplace(password,confirm_password,name,location,email,min_age,salary):
-    workplace=Workplace_info(workplace_password=password, workplace_confirm_password=confirm_password, 
+def add_workplace(name, password, email, location, min_age, salary):
+    workplace=Workplace_info(workplace_password=password,
                              workplace_name=name, workplace_location=location, workplace_email=email,
                              min_age=min_age, salary=salary)
     session.add(workplace)
