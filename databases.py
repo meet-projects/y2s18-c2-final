@@ -29,7 +29,9 @@ def add_student(user_name,password,confirm_password,full_name,birthday,email):
     session.commit()
 
 def add_workplace(password,confirm_password,name,location,email,min_age,salary):
-    workplace=Workplace_info(workplace_password=password,workplace_confirm_password=confirm_password,workplace_name=name,workplace_location=location,workplace_email=email,min_age=minage,salary=salary)
+    workplace=Workplace_info(workplace_password=password, workplace_confirm_password=confirm_password, 
+                             workplace_name=name, workplace_location=location, workplace_email=email,
+                             min_age=min_age, salary=salary)
     session.add(workplace)
     session.commit()
 
