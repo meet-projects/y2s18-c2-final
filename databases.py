@@ -19,6 +19,8 @@ def check_log_in(email, password):
 
 # def check_login_workplace():
 #     workplace_password=request.form["password"]
+#     orkplace_email=request.form[Email]
+#     return session.query(Student_info).filter_by(workplace_email=workplace_email, wo
 #     orkplace_email=request.form["Email"]
 #     return session.query(Student_info).filter_by(workplace_email=workplace_email, wo
 
