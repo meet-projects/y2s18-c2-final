@@ -1,6 +1,6 @@
 # Database related imports
 # Make sure to import your tables!
-from model import Base, Student
+from model import Base, Student_info, Workplace_info, Job
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,12 +15,14 @@ session = DBSession()
 
 # Your database functions are located under here (querying, adding items, etc.)
 def add_job(name,desc,salary,location,min_age):
-    job=Job(name=name,decsription=sesc,salary=salary,location=location,min_age_jobs=min_age)
+    job = Job(name=name, description=desc, salary=salary, location=location, min_age_jobs=min_age)
     session.add(job)
     session.commit()
+
 def get_job():
-    jobs=session.query(Job).all()
+    jobs = session.query(Job).all()
     return jobs
+
 def add_student(user_name,password,confirm_password,full_name,birthday,email):
     student=Student_info(user_name=user_name,password=password,confirm_password=confirm_password,full_name=full_name,birthday=birthday,email=email)
     session.add(student)
@@ -34,22 +36,5 @@ def add_workplace(password,confirm_password,name,location,email,min_age,salary):
 def check_log_in(email, password):
     return  session.query(Student_info).filter_by(password=password, email=email).first()
 
-# def check_login_workplace():
-#     workplace_password=request.form["password"]
-#     orkplace_email=request.form["Email"]
-#     return session.query(Student_info).filter_by(workplace_email=workplace_email, wo
-def check_login_workplace():
-    workplace_password=request.form["password"]
-    orkplace_email=request.form[Email]
-    return session.query(Student_info).filter_by(workplace_email=email,workplace_password=password)
-
-# Example of adding a student:
-def add_student(student_name, student_year):
-    print("Added a student!")
-    student = Student(name=student_name, year=student_year)
-    sekkssion.add(student)
-    session.commit()
-
-def get_all_students():
-    students = session.query(Student).all()
-    return students
+def check_login_workplace(email, password):
+    return session.query(Workplace_info).filter_by(workplace_email=email, workplace_password=password)
