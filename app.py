@@ -11,9 +11,18 @@ def home():
     return render_template('home.html')
 
 # App routing code here
-@app.route('/register_student')
+@app.route('/register_student', methods=['GET', 'POST'])
 def register_student():
-    return render_template('register_student.html')
+    if request.method == 'GET':
+        return render_template('register_student.html')
+    else:
+        name = request.form["firstname"]
+        password = request.form["pwd"]
+        check_password = request.form["check_pwd"]
+        email = request.form["Email"]
+        birthday = request.form["birthday"]
+        add_student(name, password, email, birthday)
+        return redirect(url_for("jobspage"))
 
 @app.route('/register_employeer', methods=['GET', 'POST'])
 def register_employeer():
