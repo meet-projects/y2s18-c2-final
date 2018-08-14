@@ -17,8 +17,18 @@ def register_student():
 
 @app.route('/register_employeer')
 def register_employeer():
+if request.method=get:
     return render_template('register_employee.html')
-
+    eles:
+        name= request.form["first name"
+        password=request.form["pwd"]
+        chack_password=request.form["check_pwd"]
+        email=request.form["Email"]
+        location=request.form["Location"]
+        min_age=request.form["min_age"]
+        salary]request.form["salary"]
+        add_workplace{name,password,chak_password,email,location,min_age,salary)
+        return redirect(url_4for"profale"_
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
