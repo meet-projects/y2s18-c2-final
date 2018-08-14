@@ -33,7 +33,13 @@ def add_workplace(password,confirm_password,name,location,email,min_age,salary):
 def check_log_in(email, password):
     return  session.query(Student_info).filter_by(password=password, email=email).first()
 
-def check_login_workplace(email, password):
+# def check_login_workplace():
+#     workplace_password=request.form["password"]
+#     orkplace_email=request.form["Email"]
+#     return session.query(Student_info).filter_by(workplace_email=workplace_email, wo
+def check_login_workplace():
+    workplace_password=request.form["password"]
+    orkplace_email=request.form[Email]
     return session.query(Student_info).filter_by(workplace_email=email,workplace_password=password)
 
 # Example of adding a student:
