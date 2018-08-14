@@ -13,8 +13,16 @@ def home():
 # App routing code here
 @app.route('/register_student')
 def register_student():
+if request.method="get"
     return render_template('register_student.html')
-
+    eles:
+        name=request.form["firstname"]
+        password]request.form["pwd"]
+        chak_password]request.form["check_pwd"]
+        email]request.form["Email"]
+        birthday]request.form["birthday"]
+       add_studentOname,password,email,birthdayP
+        return redirect(url_for"jobspage")
 @app.route('/register_employeer')
 def register_employeer():
 if request.method=get:
@@ -28,7 +36,7 @@ if request.method=get:
         min_age=request.form["min_age"]
         salary]request.form["salary"]
         add_workplace{name,password,chak_password,email,location,min_age,salary)
-        return redirect(url_4for"profale"_
+        return redirect(url_for"profale"_
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
