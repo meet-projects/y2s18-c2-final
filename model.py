@@ -19,7 +19,7 @@ class Workplace_info(Base):
     __tablename__="workplace_info"
     user_number=Column(Integer,primary_key=True)
     workplace_password=Column(Integer)
-    confirm_password=Column(Integer)
+    workplace_confirm_password=Column(Integer)
     workplace_name=Column(String)
     workplace_location=Column(String)
     min_age=Column(Integer)
