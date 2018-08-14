@@ -1,18 +1,36 @@
-* {
+.container-fluid{
     /* Removes extra spacing from all elements on the page */
-    padding: 50;
-    margin: 80;
+    padding: 0;
+    margin: 0;
     /* background-color: lightgray  */
+   
 }
 
 /* Put your styles BELOW this line */
 
-.header {
-    font-size: 5px;
-}
-
 #img {
     margin-left:760px;
-    margin-top: 240px
+<<<<<<< HEAD
+    margin-top: 200px;
 
 }
+
+#Button {
+    position: absolute;
+    right: 10px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+ #first {
+     color:black;
+ }
+
+ .navbar{
+     background-color:rgb(236, 235, 235);
+ }
+=======
+    margin-top: 240px
+}
+>>>>>>> e4872794d3a12c3e36b2d4e11c67ba775af6ae3e
