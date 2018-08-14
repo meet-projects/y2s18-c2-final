@@ -1,7 +1,20 @@
 * {
     /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+    padding: 50;
+    margin: 80;
+    /* background-color: lightgray  */
 }
 
 /* Put your styles BELOW this line */
+<<<<<<< HEAD
+=======
+.header {
+    font-size: 5px;
+}
+
+#img {
+    margin-left:760px;
+    margin-top: 240px
+
+}
+>>>>>>> 73b206629f85d061402079082a5eb7a3ea008760

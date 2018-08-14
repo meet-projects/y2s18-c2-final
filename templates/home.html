@@ -1,9 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <title>Seeker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <img id='img' src="{{ url_for('static', filename='itseasy.jpg') }}" alt="its easy" width="450" height="350">
+<div class="container">
+  <h2>seeker</h2>
+  <button type="button" class="btn btn-info btn-lg" id="Button">Log in</button>
+  <div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">log in</h4>
+        </div>
+        <div class="modal-body">
+            <h1>Login</h1>
+
+                Username:
+                <br>
+                <input type="text" name="firstname" placeholder="Username" class="input">
+                <br> Password:
+                <br>
+                <input type="password" name="pwd" placeholder="Password" class="input">
+                <br>
+
+                <input type="submit" name="Submit">
+                
+                <div>
+                    Don't have a account?
+                    <a href="register_student">register here </a>
+                    <br>
+                    Want to post your workplace in our website?
+                    <a href="register_employeer"> click here! </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#Button").click(function(){
+        $("#Modal").modal();
+    });
+});
+</script>
+
+<!-- </body>
     <head>
         <title>Seeker</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        
+        
     </head>
+    
     <body>
 
         <div class="header">Seekers 
@@ -11,4 +73,8 @@
         <button type="button">signup</button>
         </div>
     </body>
-</html>
+    
+    <form method="get" action="/login">
+        <button type="submit">LOGIN</button>
+    </form>
+</html> -->
