@@ -19,7 +19,7 @@ class Workplace_info(Base):
     __tablename__="workplace_info"
     user_number=Column(Integer,primary_key=True)
     workplace_password=Column(Integer)
-    confirm_password=Column(Integer)
+    workplace_confirm_password=Column(Integer)
     workplace_name=Column(String)
     workplace_location=Column(String)
     min_age=Column(Integer)
@@ -35,3 +35,14 @@ class Student(Base):
     gender = Column(String)
     def __repr__(self):
         return ("Student name: {}, Student year:{}".format(self.name, self.year))
+class Job(Base):
+    __tablename__ = "jobs"
+    id = Column(Integer, primary_key = True)
+    min_age_jobs = Column(String)
+    location = Column(String)
+    salary = Column(Integer)
+    name = Column(String)
+    description = Column(String)
+
+
+
