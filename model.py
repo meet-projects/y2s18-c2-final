@@ -43,5 +43,6 @@ class Job(Base):
     salary = Column(Integer)
     name = Column(String)
     description = Column(String)
-    
+
+
 
