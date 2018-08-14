@@ -21,6 +21,11 @@ def check_log_in(email, password):
 #     workplace_password=request.form["password"]
 #     orkplace_email=request.form["Email"]
 #     return session.query(Student_info).filter_by(workplace_email=workplace_email, wo
+=======
+def check_login_workplace():
+    workplace_password=request.form["password"]
+    orkplace_email=request.form[Email]
+    return session.query(Student_info).filter_by(workplace_email=email,workplace_password=password)
 # Example of adding a student:
 def add_student(student_name, student_year):
     print("Added a student!")
