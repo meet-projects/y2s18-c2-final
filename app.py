@@ -23,8 +23,9 @@ def register_employeer():
 def login():
     return render_template('login.html')
 
-@app.route('/logedin')
-def logedin():
+@app.route('/jobspage')
+def jobspage():
+    
     return render_template('home2.html')
 
 # Running the Flask app
