@@ -1,5 +1,6 @@
 # Database related imports
 # Make sure to import your tables!
+import datetime 
 from model import Base, Student_info, Workplace_info, Job
 
 from sqlalchemy import create_engine
@@ -22,8 +23,8 @@ def get_job():
     jobs = session.query(Job).all()
     return jobs
 
-def add_student(user_name, password, birthday, email):
-    student=Student_info(user_name=user_name, password=password, birthday=birthday, email=email)
+def add_student(user_name, password, full_name, birthday, email):
+    student=Student_info(user_name=user_name, password=password, birthday=birthday, full_name=full_name, email=email)
     session.add(student)
     session.commit()
 
@@ -39,3 +40,10 @@ def check_log_in(email, password):
 
 def check_login_workplace(email, password):
     return session.query(Workplace_info).filter_by(workplace_email=email, workplace_password=password)
+
+def get_all_students():
+    students = session.query(Student_info),all()
+    
+
+# add_student("hasan", "hassan1", "hassan salah", datetime.date(1999,8,21), "hassan1@hotmail.com")
+#add_student("alex", "alexx", "alex zoubi", datetime.date(2001,7,26), "alex2001@gmail.com")
