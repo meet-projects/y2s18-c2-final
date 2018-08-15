@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import add_student, check_log_in, add_job, add_workplace
+from databases import add_student, check_log_in, add_job, add_workplace, get_all_students
 
 # Starting the flask app
 app = Flask(__name__)
@@ -71,7 +71,7 @@ def add_job_route():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    return render_template('profile.html', students_profile= get_all_students()) 
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
