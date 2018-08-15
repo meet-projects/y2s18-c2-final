@@ -1,0 +1,11 @@
+.Navbar{
+    background-color: rgb(236, 235, 235)
+}
+.container-pagination{
+    position: absolute; 
+    bottom: 5px;
+
+}
+body{
+    background-color: aqua;
+}
