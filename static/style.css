@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url("img/business\ people2.png");
+    background-image: url("img/new1.xcf");
     background-attachment: fixed;
     background-size:100%;
 }
@@ -16,13 +16,8 @@ body{
 
 #img {
     margin-left:760px;
-    margin-top: 140px;
+    margin-top: 200px;
 
-}
-
-#info {
-    position: absolute;
-    right: 100px;
 }
 
 #Button {
@@ -44,7 +39,7 @@ body{
 .loginbtn {
     background-color: rgb(68, 136, 196);
     color: antiquewhite;
-    padding: 13px 10px;
+    padding: 10px 7px;
     margin: 4px 0;
     border: none;
     cursor: pointer;
@@ -52,6 +47,7 @@ body{
     opacity: 0.9;
 
 }
+<<<<<<< HEAD
  
 #haha{
     position: absolute;
@@ -70,3 +66,5 @@ body{
     margin: 20px auto;
 
 }
+=======
+>>>>>>> 1b60ab5147e5d87b20ce279718fb5ca9f3fa1b2e

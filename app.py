@@ -54,7 +54,7 @@ def login():
 
 @app.route('/jobspage')
 def jobspage():
-    if session.get("logedin") == True:
+    if session.get("loggedin") == True:
         return render_template('home2.html')
     else:
         return redirect(url_for("login"))
