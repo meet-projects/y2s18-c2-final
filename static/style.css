@@ -55,13 +55,21 @@ body{
 
 .text {
     position: absolute;
-    width: 100%;
+    width: 94%;
     bottom: 20px; 
     text-align: center; 
+    color: rgb(236, 235, 235);
 }
 
 .card {
     width: 50%;
     margin: 20px auto;
+    background-color: lavender;
 
+
+}
+
+.card-title {
+    color: red;
+    font-size: 25px;
 }
