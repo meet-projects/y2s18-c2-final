@@ -69,6 +69,11 @@ def add_job_route():
     add_job(job_name,job_desc,job_salary,job_location,job_min_age)
     return redirect(url_for("jobspage"))
 
+@app.route('/log_out')
+def log_out():
+    session.clear()
+    return redirect(url_for("home"))
+
 @app.route('/profile')
 def profile():
     return render_template('profile.html', students_profile= get_all_students()) 
