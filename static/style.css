@@ -47,6 +47,7 @@ body{
     opacity: 0.9;
 
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -67,4 +68,22 @@ body{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+#haha{
+    position: absolute;
+    right:50px;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    bottom: 20px; 
+    text-align: center; 
+}
+
+.card {
+    width: 50%;
+    margin: 20px auto;
+
 }
