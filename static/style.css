@@ -16,11 +16,7 @@ body{
 
 #img {
     margin-left:760px;
-<<<<<<< HEAD
-    margin-top: 140px;
-=======
     margin-top: 200px;
->>>>>>> 3d0c20ae96ab8a0224ef30d644401ef50355fb2c
 
 }
 
@@ -40,7 +36,6 @@ body{
  .navbar{
      background-color:rgb(236, 235, 235);
  }
-<<<<<<< HEAD
 .loginbtn {
     background-color: rgb(68, 136, 196);
     color: antiquewhite;
@@ -52,8 +47,3 @@ body{
     opacity: 0.9;
 
 }
-=======
-
-    margin-top: 240px
-}
->>>>>>> 3d0c20ae96ab8a0224ef30d644401ef50355fb2c
