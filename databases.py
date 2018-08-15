@@ -14,12 +14,12 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 # Your database functions are located under here (querying, adding items, etc.)
-def add_job(name,desc,salary,location,min_age):
-    job = Job(name=name, description=desc, salary=salary, location=location, min_age_jobs=min_age)
+def add_job(name,desc,location,salary,min_age,email):
+    job = Job(name=name, description=desc, salary=salary, location=location, min_age_jobs=min_age, email=email)
     session.add(job)
     session.commit()
 
-def get_job():
+def get_jobs():
     jobs = session.query(Job).all()
     return jobs
 

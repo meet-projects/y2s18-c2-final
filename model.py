@@ -33,4 +33,5 @@ class Job(Base):
     location = Column(String)
     salary = Column(Integer)
     name = Column(String)
+    email = Column(String)
     description = Column(String)
