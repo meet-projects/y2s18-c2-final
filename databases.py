@@ -37,7 +37,11 @@ def add_workplace(name, password, email, location, min_age, salary):
     session.commit()
 
 def check_log_in(email, password):
-    return  session.query(Student_info).filter_by(password=password, email=email).first()
+    user = session.query(Student_info).filter_by(email=email).first()
+    if user != None:
+        if user.password!=password:
+            return None
+    return user
 
 def check_login_workplace(email, password):
     return session.query(Workplace_info).filter_by(workplace_email=email, workplace_password=password)

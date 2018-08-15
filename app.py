@@ -75,7 +75,7 @@ def add_job_route():
     if request.method == 'GET':
         return render_template('register_job.html')
     else:
-        job_name=request.form["name"]
+        job_name = request.form["name"]
         job_desc=request.form["desc"]
         job_salary=request.form["salary"]
         job_location=request.form["location"]
