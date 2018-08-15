@@ -6,6 +6,8 @@ from databases import add_student, check_log_in, add_job, add_workplace, get_all
 
 # Starting the flask app
 app = Flask(__name__)
+app.secret_key = "secret"
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -16,26 +18,33 @@ def register_student():
     if request.method == 'GET':
         return render_template('register_student.html')
     else:
-        name = request.form["firstname"]
+        name = request.form["fullname"]
         password = request.form["pwd"]
         check_password = request.form["check_pwd"]
         email = request.form["Email"]
-        birthday = request.form["birthday"]
+        birthday = request.form.getlist("birthday")
+        print(birthday)
         add_student(name, password, email, birthday)
+        session["loggedin"] = True
+        session["student"] = True
+        session["email"] = email
         return redirect(url_for("jobspage"))
 
-@app.route('/register_employeer', methods=['GET', 'POST'])
-def register_employeer():
+@app.route('/register_employer', methods=['GET', 'POST'])
+def register_employer():
     if request.method == 'GET':
-        return render_template('register_employee.html')
+        return render_template('register_employer.html')
     else:
-        name = request.form["firstname"]
-        password = request.form["pwd"]
+        name = request.form["companyname"]
+        password = request.form["password"]
         check_password = request.form["check_pwd"]
         email = request.form["Email"]
         location = request.form["Location"]
         min_age = request.form["min_age"]
         salary = request.form["salary"]
+        session["loggedin"] = True
+        session["employer"] = True
+        session["email"] = email
         add_workplace(name, password, email, location, min_age, salary)
         return redirect(url_for("profile"))
 
@@ -48,14 +57,16 @@ def login():
         if checking == None:
             return render_template('home.html', error = "retry password")
         else:
-            session["logedin"]=True
+            session["loggedin"] = True
+            session["student"] = True
+            session["email"] = students_email
             return redirect(url_for('jobspage'))
     return render_template('home.html')
 
 @app.route('/jobspage')
 def jobspage():
     if session.get("loggedin") == True:
-        return render_template('home2.html')
+        return render_template('logged_in.html')
     else:
         return redirect(url_for("login"))
 
@@ -77,6 +88,7 @@ def log_out():
 @app.route('/profile')
 def profile():
     return render_template('profile.html', students_profile= get_all_students()) 
+    
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
