@@ -54,7 +54,7 @@ def login():
 
 @app.route('/jobspage')
 def jobspage():
-    if session.get("logedin") == True:
+    if session.get("loggedin") == True:
         return render_template('home2.html')
     else:
         return redirect(url_for("login"))
@@ -72,6 +72,7 @@ def add_job_route():
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
+
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)

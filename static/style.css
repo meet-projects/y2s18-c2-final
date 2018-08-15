@@ -23,6 +23,7 @@ body{
 #info {
     position: absolute;
     right: 100px;
+    padding:  12px 15px;
 }
 
 #Button {
@@ -39,7 +40,7 @@ body{
  }
 
  .navbar{
-     background-color:rgb(236, 235, 235);
+     background-color:rgb(216, 203, 203);
  }
 .loginbtn {
     background-color: rgb(68, 136, 196);
