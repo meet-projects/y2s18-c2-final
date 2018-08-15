@@ -40,8 +40,6 @@ def check_log_in(email, password):
 
 def check_login_workplace(email, password):
     return session.query(Workplace_info).filter_by(workplace_email=email, workplace_password=password)
-<<<<<<< HEAD
-=======
 
 def get_all_students():
     students = session.query(Student_info),all()
@@ -49,4 +47,3 @@ def get_all_students():
 
 # add_student("hasan", "hassan1", "hassan salah", datetime.date(1999,8,21), "hassan1@hotmail.com")
 #add_student("alex", "alexx", "alex zoubi", datetime.date(2001,7,26), "alex2001@gmail.com")
->>>>>>> f0c59bcf982d8610675790824ee26e35bb78d454
