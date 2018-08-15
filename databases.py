@@ -23,7 +23,6 @@ def get_job():
     jobs = session.query(Job).all()
     return jobs
 
-
 def add_student(full_name, password, email, birthday):
     birthday = datetime.date(int(birthday[2]), int(birthday[1]), int(birthday[0]))
     student=Student_info(password=password, birthday=birthday, full_name=full_name, email=email)

@@ -18,19 +18,16 @@ def register_student():
     if request.method == 'GET':
         return render_template('register_student.html')
     else:
-
-        full_name = request.form["full_name"]
         name = request.form["fullname"]
-        password = request.form["pwd"]
+        password = request.form["password"]
         check_password = request.form["check_pwd"]
         email = request.form["Email"]
-        birthday = request.form.getlist("birthday")
-        print(birthday)
+        birthday = request.form["birthday"].split("/")
         add_student(name, password, email, birthday)
         session["loggedin"] = True
         session["student"] = True
         session["email"] = email
-        add_student(username, password, full_name, birthday, email)
+        
         return redirect(url_for("jobspage"))
 
 @app.route('/register_employer', methods=['GET', 'POST'])
@@ -38,9 +35,8 @@ def register_employer():
     if request.method == 'GET':
         return render_template('register_employer.html')
     else:
-
         name = request.form["companyname"]
-        password = request.form["password"]
+        password = request.form["pwd"]
         check_password = request.form["check_pwd"]
         email = request.form["Email"]
         location = request.form["Location"]
