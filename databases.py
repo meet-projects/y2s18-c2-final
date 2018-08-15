@@ -22,16 +22,11 @@ def add_job(name,desc,salary,location,min_age):
 def get_job():
     jobs = session.query(Job).all()
     return jobs
-<<<<<<< HEAD
- 
-def add_student(user_name, password, full_name, birthday, email):
-    student=Student_info(user_name=user_name, password=password, birthday=birthday, full_name=full_name, email=email)
-=======
+
 
 def add_student(full_name, password, email, birthday):
     birthday = datetime.date(int(birthday[2]), int(birthday[1]), int(birthday[0]))
     student=Student_info(password=password, birthday=birthday, full_name=full_name, email=email)
->>>>>>> 7ced1e3e59119ff3a3bcca51427c4796293db7f4
     session.add(student)
     session.commit()
 
