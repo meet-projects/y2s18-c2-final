@@ -1,66 +1,64 @@
 <DOCTYPE! html>
-    <html>
+<html>
 
-    <head>
-        
-        <title>register</title>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapc <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">dn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
-    </head>
-    <body>
-    <form action="/action_page.php">
+<head>
+    
+    <title>Register</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapc <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">dn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    <form action="/register_employer" method="POST">
         <div class="container">
+            <div class="container container2">
+            <div class="title">
             <h1>Register</h1>
-            
             <h3>As an employeer</h3>
-
-                <form>
-                    Username:
-                    <br>
-                    <input type="text" name="firstname" placeholder="company name" class="input">
-                    <br> Password:
-                    <br>
-                    <input type="password" name="pwd" placeholder="Password" class="input">
-                    <br> Reapeat password:
-                    <br>
-                    <input type="password" name="check_pwd" placeholder="Repeat Password" class="input">
-                    <br> Email:
-                    <br>
-                    <input type="email" name="Email" placeholder="name@gmail.com" class="input">
-                    <br>
-                    Location:
-                    <br>
-                    <input type="text" name="Location" placeholder="Location" class="input">
-                    <br>
-                    Age:
-                    <br>
-                    <input type="text" name="min_age" placeholder="minimum accepted age" class="input">
-                    <br>
-                    Salary:
-                    <br>
-                    <input type="text" name="salary" placeholder="salary" class="input">
-                    <br>
-                    <br>
-                    <button type="submit" class="registerbtn">Register</button>
-                    
-                    <br>
-
-                        Already have an account?
-                        <a href="/">click here </a>
-                    </div>
-                </form>
-                <br>
-                <br>
-                <br>
-                <br>
-                </div>
             </div>
+            Username:
+            <br>
+            <input type="text" name="firstname" placeholder="company name" class="input">
+            <br> Password:
+            <br>
+            <input type="password" name="password" placeholder="Password" class="input">
+            <br> Reapeat password:
+            <br>
+            <input type="password" name="check_pwd" placeholder="Repeat Password" class="input">
+            <br> Email:
+            <br>
+            <input type="email" name="Email" placeholder="name@gmail.com" class="input">
+            <br>
+            Location:
+            <br>
+            <input type="text" name="Location" placeholder="Location" class="input">
+            <br>
+            Age:
+            <br>
+            <input type="text" name="min_age" placeholder="minimum accepted age" class="input">
+            <br>
+            Salary:
+            <br>
+            <input type="text" name="salary" placeholder="salary" class="input">
+            <br>
+            <br>
+            <button type="submit" class="registerbtn">Register</button>
+            
+            <br>
+            
+            Already have an account?
+            <a href="/">click here </a>
         </div>
+    </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    </body>
+</body>
 
-    </html>
+</html>

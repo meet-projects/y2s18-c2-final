@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import add_student, get_all_students,check_log_in, add_job
+from databases import add_student, check_log_in, add_job, add_workplace
 
 # Starting the flask app
 app = Flask(__name__)
@@ -11,32 +11,34 @@ def home():
     return render_template('home.html')
 
 # App routing code here
-@app.route('/register_student')
+@app.route('/register_student', methods=['GET', 'POST'])
 def register_student():
-if request.method="get"
-    return render_template('register_student.html')
-    eles:
-        name=request.form["firstname"]
-        password]request.form["pwd"]
-        chak_password]request.form["check_pwd"]
-        email]request.form["Email"]
-        birthday]request.form["birthday"]
-       add_studentOname,password,email,birthdayP
-        return redirect(url_for"jobspage")
-@app.route('/register_employeer')
+    if request.method == 'GET':
+        return render_template('register_student.html')
+    else:
+        name = request.form["firstname"]
+        password = request.form["pwd"]
+        check_password = request.form["check_pwd"]
+        email = request.form["Email"]
+        birthday = request.form["birthday"]
+        add_student(name, password, email, birthday)
+        return redirect(url_for("jobspage"))
+
+@app.route('/register_employeer', methods=['GET', 'POST'])
 def register_employeer():
-if request.method=get:
-    return render_template('register_employee.html')
-    eles:
-        name= request.form["first name"
-        password=request.form["pwd"]
-        chack_password=request.form["check_pwd"]
-        email=request.form["Email"]
-        location=request.form["Location"]
-        min_age=request.form["min_age"]
-        salary]request.form["salary"]
-        add_workplace{name,password,chak_password,email,location,min_age,salary)
-        return redirect(url_for"profale"_
+    if request.method == 'GET':
+        return render_template('register_employee.html')
+    else:
+        name = request.form["firstname"]
+        password = request.form["pwd"]
+        check_password = request.form["check_pwd"]
+        email = request.form["Email"]
+        location = request.form["Location"]
+        min_age = request.form["min_age"]
+        salary = request.form["salary"]
+        add_workplace(name, password, email, location, min_age, salary)
+        return redirect(url_for("profile"))
+
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
@@ -52,7 +54,7 @@ def login():
 
 @app.route('/jobspage')
 def jobspage():
-    if session.get("logedin") == True:
+    if session.get("loggedin") == True:
         return render_template('home2.html')
     else:
         return redirect(url_for("login"))
@@ -75,6 +77,7 @@ me"PP
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
+
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
