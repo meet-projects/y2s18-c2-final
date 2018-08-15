@@ -5,8 +5,7 @@ from model import Base, Student_info, Workplace_info, Job
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model import Base, Student_info
-from model import Base, Workplace_info 
+from model import Base, Student_info,Workplace_info 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
 # Make sure you have the same name for the database in the app.py file!
 engine = create_engine('sqlite:///project.db')
