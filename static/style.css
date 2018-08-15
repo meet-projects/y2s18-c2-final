@@ -47,3 +47,24 @@ body{
     opacity: 0.9;
 
 }
+<<<<<<< HEAD
+ 
+#haha{
+    position: absolute;
+    right:50px;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    bottom: 20px; 
+    text-align: center; 
+}
+
+.card {
+    width: 50%;
+    margin: 20px auto;
+
+}
+=======
+>>>>>>> 1b60ab5147e5d87b20ce279718fb5ca9f3fa1b2e

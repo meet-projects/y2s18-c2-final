@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Bootstrap Tutorial</title>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Add Bootstrap CSS to the page -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap4.css') }}">
     
     <!-- My custom styles -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -16,21 +17,19 @@
 <body>
     <!-- Stuff will go here later -->
     {% for student in students_profile %}
-    <div class="row">
-            <div class="col-12">
-               <p> {{student.full_name}}</p>
-               <p>{{student.birthday}}</p>
-               <p>{{student.email}}</p>
+    <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"> {{student.full_name}}</h5>
+               <p class="card-text" > {{student.birthday}}</p>
+               <p class="card-text" > {{student.email}}</p>
             </div>
     </div> 
-
-
     {% endfor %}
     
     
     <!-- Add JQuery and Bootstrap JS to the page -->
     <!-- JQuery MUST BE BEFORE BOOTSTRAP -->
-    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
 </body>
 </html>
